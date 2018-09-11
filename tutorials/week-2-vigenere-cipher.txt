@@ -1,3 +1,11 @@
-Given a text:
+Given a text: Throwing consider dwelling bachelor joy her proposal laughter
+encrypt it with the key: onekey
 
-:
+Now we list the text below with the key
+
+onekeyon ekeyonek eyonekey onekeyon eke yon ekeyonek eyonekey
+Throwing consider dwelling bachelor joy her proposal laughter
+---------------------------------------------------------------
+
+Huvyagbt gyrqwqib husypsre pngrijce nyc fse tbsncfev pyitldip
+
