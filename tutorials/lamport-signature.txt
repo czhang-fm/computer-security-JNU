@@ -15,4 +15,27 @@ Therefore, it is difficult to compute S[x,y] from P[x,y] for all x, y
 Find the encoding from the ascii table
 https://www.rapidtables.com/code/text/ascii-table.html
 
-For example, 
+For example, given the following sentence:
+
+Hello.
+
+We first apply the encoding:
+'H' --> 01001000
+'e' --> 01100101
+'l' --> 01101100
+'o' --> 01101111
+'.' --> 00101110
+
+The binary representation of 'Hello.' then is
+010010000110010101101100011011000110111100101110
+which is the plain source of 144 bit (144 <= 256)
+
+The signature is applied on a bit on k's position by S[0,k] if k's bit is 0, or S[1,k] if k's bit is 1. Therefore, the signature is
+S[0,0]S[1,1]S[0,2]S[0,3]S[1,4]S[0,5].....
+
+One can verify the signature by computing for each position, e.g., SHA256(S[0,0]) = P[0,0], SHA256(S[1,1]) = P[1,1].... 
+Since it is difficult to forge each S[i,j] from P[i,j]
+
+However, the first use of the signature reveals 1/2 of the secret key, and n's use reveals 1-(1/2}^n of the secret key.
+
+
